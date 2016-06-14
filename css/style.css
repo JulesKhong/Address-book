@@ -1,0 +1,29 @@
+#show-contact {
+  display: none;
+}
+
+.contact {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.contact:hover {
+  text-decoration: underline;
+}
+
+#contentbody {
+  margin-top: 100px;
+}
+
+.landmark-list {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.landmark-list:hover {
+  text-decoration: underline;
+}
+
+#travel-info {
+  display: none;
+}
