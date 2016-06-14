@@ -33,7 +33,7 @@ function resetFields() {
 
 $(document).ready(function() {
   $("#add-address").click(function() {
-    $("#new-addresses").append('<div class="new-address">' +
+    $("#new-addresses").append('<div class="new-address" id="secondAddress">' +
                                  '<div class="form-group">' +
                                    '<label for="new-type">Address type: Home, Mailing, or Business.</label>' +
                                    '<input type="text" class="form-control new-type">' +
@@ -76,6 +76,9 @@ $(document).ready(function() {
       $('.first-name').text(newContact.firstName);
       $('.last-name').text(newContact.lastName);
       $("ul#addresses").text("");
+      $("div#secondAddress").hide();
+      // $("div").not(document.getElementById("new-addresses"));
+
         // debugger;
       newContact.addresses.forEach(function(address){
         $('ul#addresses').append("<li>" + address.fullAddress() + "</li>");
@@ -83,6 +86,7 @@ $(document).ready(function() {
     });
 
     resetFields();
+
     // $("input#new-first-name").val("");
     // $("input#new-last-name").val("");
 
